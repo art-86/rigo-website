@@ -20,7 +20,7 @@
    panel.style.top = (y > panel.offsetHeight + 30 ? y - panel.offsetHeight - 22 : y + 24) + 'px';
  }
  buttons.forEach(button => {
-   button.addEventListener('click', () => active === button ? close() : show(button));
+   button.addEventListener('click', () => show(button));
    button.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') show(button); });
  });
  panel.querySelector('button').addEventListener('click', () => { const previous = active; close(); previous?.focus(); });
