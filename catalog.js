@@ -1,0 +1,2 @@
+const search=document.querySelector('#product-search');
+search?.addEventListener('input',()=>{const q=search.value.trim().toLocaleLowerCase('ru');let count=0;document.querySelectorAll('.product-card[data-search]').forEach(card=>{const match=card.textContent.toLocaleLowerCase('ru').includes(q);card.hidden=!match;if(match)count++});document.querySelector('#product-count').textContent=`Моделей: ${count}`;document.querySelector('#catalog-empty').hidden=count>0});
